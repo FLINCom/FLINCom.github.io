@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellflinc.online — Скоро открытие!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero {
+            padding: 100px 20px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 1s ease 0.5s forwards;
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 1s ease 0.8s forwards;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #ccc;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 1s ease 1.1s forwards;
+        }
+
+        .highlight {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .status-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 40px auto;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: scale(0.9);
+            animation: scaleIn 1s ease 1.4s forwards;
+        }
+
+        @keyframes scaleIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .status-card h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+            height: 12px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 75%;
+            background: linear-gradient(90deg, #00d4ff, #0088ff);
+            border-radius: 10px;
+            animation: loading 2s infinite alternate, fill 2s ease-out;
+        }
+
+        @keyframes loading {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fill {
+            from { width: 0%; }
+            to { width: 75%; }
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            width: 220px;
+            transition: transform 0.3s, background 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: featureAppear 0.6s ease forwards;
+        }
+
+        .feature:nth-child(1) { animation-delay: 1.7s; }
+        .feature:nth-child(2) { animation-delay: 1.9s; }
+        .feature:nth-child(3) { animation-delay: 2.1s; }
+
+        @keyframes featureAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        .countdown {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 40px 0;
+            color: #00d4ff;
+            opacity: 0;
+            animation: fadeIn 1s ease 2.3s forwards;
+        }
+
+        .contact {
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .email {
+            color: #00d4ff;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed #00d4ff;
+            transition: 0.3s;
+        }
+
+        .email:hover {
+            color: #ff7b00;
+            border-color: #ff7b00;
+        }
+
+        .social {
+            margin-top: 40px;
+        }
+
+        .social a {
+            display: inline-block;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .social a:hover {
+            background: #00d4ff;
+            transform: translateY(-5px);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .logo { font-size: 2.5rem; }
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .status-card { padding: 25px; }
+            .feature { width: 100%; max-width: 300px; }
+            .countdown { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="logo">WELLFLINC.ONLINE</div>
+            <h1>Что-то <span class="highlight">отличное</span> уже в пути</h1>
+            <p class="subtitle">Мы создаём для вас современный и удобный веб-ресурс. Оставайтесь на связи!</p>
+            
+            <div class="status-card">
+                <h2><span class="pulse"></span> Статус разработки</h2>
+                <p>Идёт активная работа над дизайном, функционалом и контентом.</p>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress-text">
+                    <span>Начало</span>
+                    <span>75%</span>
+                    <span>Завершение</span>
+                </div>
+                <p>Ожидаемое открытие: <strong>Июнь 2024</strong></p>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Современные технологии</h3>
+                    <p>Используем передовые решения для скорости и надежности.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <h3>Уникальный дизайн</h3>
+                    <p>Интерфейс, который понравится вам и вашим клиентам.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Адаптивность</h3>
+                    <p>Идеальное отображение на всех устройствах.</p>
+                </div>
+            </div>
+
+            <div class="countdown">
+                <!-- Тут можно добавить скрипт обратного отсчёта, если нужно -->
+                Скоро открытие!
+            </div>
+
+            <div class="contact">
+                <p>Есть вопросы или предложения? Пишите нам!</p>
+                <p><a href="mailto:hello@wellflinc.online" class="email">hello@wellflinc.online</a></p>
+                
+                <div class="social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2024 Wellflinc.online. Все права защищены. | Сайт находится в разработке.
+        </footer>
+    </div>
+
+    <script>
+        // Плавное появление элементов при скролле
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
