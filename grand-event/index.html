@@ -139,79 +139,82 @@
     <div class="menu-bg-overlay"></div>
     <div class="container">
         
-        <!-- ПЕРВЫЙ РЯД: 4 кнопки -->
-        <div class="menu-categories-row menu-categories-row-top">
-            <!-- 1. Холодные закуски -->
-            <div class="menu-category-card" data-category="zakuski">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/zakuski.jpg" alt="Закуски" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
+        <!-- НОВАЯ СТРУКТУРА 6+1 -->
+        <div class="menu-categories-container">
+            <!-- Левая часть: 6 кнопок в сетке 3x2 -->
+            <div class="menu-categories-left">
+                <!-- 1. Холодные закуски -->
+                <div class="menu-category-card" data-category="zakuski">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/zakuski.jpg" alt="Закуски" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Холодные<br>закуски</h3>
                 </div>
-                <h3 class="menu-card-title">Холодные<br>закуски</h3>
+                
+                <!-- 2. Горячие закуски -->
+                <div class="menu-category-card" data-category="goryachie-zakuski">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/hot-dishes.jpg" alt="Горячие закуски" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Горячие<br>закуски</h3>
+                </div>
+                
+                <!-- 3. Шашлыки -->
+                <div class="menu-category-card" data-category="shashlyki">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/shashlyk.jpg" alt="Шашлыки" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Шашлыки</h3>
+                </div>
+                
+                <!-- 4. Основные блюда -->
+                <div class="menu-category-card" data-category="osnovnye-blyuda">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/main-courses.jpg" alt="Основные блюда" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Основные<br>блюда</h3>
+                </div>
+                
+                <!-- 5. Супы -->
+                <div class="menu-category-card" data-category="supy">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/soups.jpg" alt="Супы" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Супы</h3>
+                </div>
+                
+                <!-- 6. Десерты -->
+                <div class="menu-category-card" data-category="deserty">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/desserts.jpg" alt="Десерты" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Десерты</h3>
+                </div>
             </div>
             
-            <!-- 2. Горячие закуски -->
-            <div class="menu-category-card" data-category="goryachie-zakuski">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/hot-dishes.jpg" alt="Горячие закуски" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
+            <!-- Правая часть: кнопка Бар отдельно -->
+            <div class="menu-categories-right">
+                <!-- 7. Бар -->
+                <div class="menu-category-card bar-card" data-category="bar">
+                    <div class="card-image-wrapper">
+                        <img src="menu-images/bar.jpg" alt="Бар" class="menu-card-image">
+                        <div class="menu-card-overlay"></div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3 class="menu-card-title">Бар</h3>
                 </div>
-                <h3 class="menu-card-title">Горячие<br>закуски</h3>
-            </div>
-            
-            <!-- 3. Шашлыки -->
-            <div class="menu-category-card" data-category="shashlyki">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/shashlyk.jpg" alt="Шашлыки" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
-                </div>
-                <h3 class="menu-card-title">Шашлыки</h3>
-            </div>
-            
-            <!-- 4. Основные блюда -->
-            <div class="menu-category-card" data-category="osnovnye-blyuda">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/main-courses.jpg" alt="Основные блюда" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
-                </div>
-                <h3 class="menu-card-title">Основные<br>блюда</h3>
-            </div>
-        </div>
-        
-        <!-- ВТОРОЙ РЯД: 3 кнопки по центру -->
-        <div class="menu-categories-row menu-categories-row-bottom">
-            <!-- 5. Супы -->
-            <div class="menu-category-card" data-category="supy">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/soups.jpg" alt="Супы" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
-                </div>
-                <h3 class="menu-card-title">Супы</h3>
-            </div>
-            
-            <!-- 6. Десерты -->
-            <div class="menu-category-card" data-category="deserty">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/desserts.jpg" alt="Десерты" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
-                </div>
-                <h3 class="menu-card-title">Десерты</h3>
-            </div>
-            
-            <!-- 7. Бар -->
-            <div class="menu-category-card" data-category="bar">
-                <div class="card-image-wrapper">
-                    <img src="menu-images/bar.jpg" alt="Бар" class="menu-card-image">
-                    <div class="menu-card-overlay"></div>
-                    <div class="card-glow"></div>
-                </div>
-                <h3 class="menu-card-title">Бар</h3>
             </div>
         </div>
         
